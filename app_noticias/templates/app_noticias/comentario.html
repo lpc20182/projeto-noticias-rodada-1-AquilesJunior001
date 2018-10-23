@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comentario</title>
+    <style type="text/css">
+        .errorlist {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Comentario</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar Comentario</button>
+</form>
+</body>
+</html>

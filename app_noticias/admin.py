@@ -13,6 +13,9 @@ class PessoaAdmin(admin.ModelAdmin):
 class TagAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('nome',)}
 
+@admin.register(Comentario)
+class ComentarioAdmin(admin.ModelAdmin):
+    pass
 
 @admin.register(Noticia)
 class NoticiaAdmin(admin.ModelAdmin):

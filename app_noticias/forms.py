@@ -1,5 +1,12 @@
 from django import forms
 
+class ComentarioForm(forms.Form):
+    cometario = forms.CharField(max_length=128)
+
+    def clean(self):
+        dados = super().clean()
+        comentario = dados.get('comentario')
+        return dados
 
 class ContatoForm(forms.Form):
     nome = forms.CharField(max_length=128, min_length=12)
